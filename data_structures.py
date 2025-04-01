@@ -82,3 +82,82 @@ where_my_things_are = {
 
 for key in where_my_things_are:
     print(f'My {key} is kept in the {where_my_things_are[key]}')
+
+colors = ['red', 'green', 'blue']
+
+colors[-1] = 'brown'
+print(colors)
+# prints: ['red', 'green', 'brown']
+
+# The JS equivalent to push()
+colors.append('purple')
+print(colors)
+# prints: ['red', 'green', 'brown', 'purple']
+# purple was added to the end of the list
+
+colors.extend(['orange', 'black'])
+print(colors)
+# prints: ['red', 'green', 'brown', 'purple', 'orange', 'black']
+# orange and black were added to the end of the list
+
+
+colors.insert(0, 'yellow')
+print(colors)
+# prints: ['red', 'yellow', 'green', 'brown', 'purple', 'orange', 'black']
+# yellow was added at the 1 index; no elements were replaced
+
+
+green = colors.pop(2)
+print(colors)
+# prints: ['red', 'yellow', 'brown', 'purple', 'orange', 'black']
+# green was removed at the 2 index and is in the green variable
+
+
+colors.remove('orange')
+print(colors)
+# prints: ['red', 'yellow', 'brown', 'purple', 'black']
+
+
+# colors.clear()
+# print(colors)
+# # prints: []
+
+
+colors = ['red', 'green', 'blue']
+for color in colors:
+    print(color)
+    # prints:
+    # red
+    # green
+    # blue
+
+for idx, color in enumerate(colors):
+    print(idx, color)
+    # prints:
+    # 0 red
+    # 1 green
+    # 2 blue
+
+
+tupel_colors = ('white', 'purple', 'orange')
+print(tupel_colors[1])
+# prints: green
+
+for idx, tupel_color in enumerate(tupel_colors):
+    print(idx, tupel_color)
+    # prints:
+    # 0 red
+    # 1 green
+    # 2 blue
+
+
+
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+squares = []
+
+# we want 'n * n' for each 'n' in nums 
+for n in nums:
+    squares.append(n * n)
+
+print(squares)
+# prints [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
